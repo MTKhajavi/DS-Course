@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c08ce474-6b70-406a-8017-2ca9b6d2f30a" name="Default Changelist" comment="" />
+    <list default="true" id="c08ce474-6b70-406a-8017-2ca9b6d2f30a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSU/Q1/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/DSU/Q1/task.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +13,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DSU/Q1/task.py">
+          <provider selected="true" editor-type-id="StudyEditor">
+            <state>
+              <EduEditorState>
+                <MainEditorState relative-caret-position="241">
+                  <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="66" selection-end-column="18" />
+                </MainEditorState>
+              </EduEditorState>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DSU/Q1/task.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -26,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BST/Q1/task.py" />
         <option value="$PROJECT_DIR$/BST/Q2/task.html" />
         <option value="$PROJECT_DIR$/BST/Q2/tests.py" />
         <option value="$PROJECT_DIR$/BST/Q3/task.html" />
@@ -77,14 +103,14 @@
         <option value="$PROJECT_DIR$/Balanced BSTs/Q4/tests.py" />
         <option value="$PROJECT_DIR$/Balanced BSTs/Q2/tests.py" />
         <option value="$PROJECT_DIR$/Balanced BSTs/Q1/tests.py" />
+        <option value="$PROJECT_DIR$/DSU/Q1/task.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="40" />
-    <option name="width" value="2800" />
-    <option name="height" value="1840" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="798" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -92,52 +118,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-            </path>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-              <item name="Balanced BSTs" type="e994c609:CCLessonNode" />
-            </path>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-              <item name="Balanced BSTs" type="e994c609:CCLessonNode" />
-              <item name="Q1" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-              <item name="Balanced BSTs" type="e994c609:CCLessonNode" />
-              <item name="Q2" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-              <item name="Balanced BSTs" type="e994c609:CCLessonNode" />
-              <item name="Q3" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="DS Course" type="a264ea2a:RootNode" />
-              <item name="DS Course" type="ef639090:CCCourseNode" />
-              <item name="Balanced BSTs" type="e994c609:CCLessonNode" />
-              <item name="Q4" type="83e62b93:CCTaskNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="DS Course" type="b2602c69:ProjectViewProjectNode" />
               <item name="DS Course" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DS-Course" type="a264ea2a:RootNode" />
+              <item name="DS-Course" type="ef639090:CCCourseNode" />
+            </path>
+            <path>
+              <item name="DS-Course" type="a264ea2a:RootNode" />
+              <item name="DS-Course" type="ef639090:CCCourseNode" />
+              <item name="DSU" type="e994c609:CCLessonNode" />
+            </path>
+            <path>
+              <item name="DS-Course" type="a264ea2a:RootNode" />
+              <item name="DS-Course" type="ef639090:CCCourseNode" />
+              <item name="DSU" type="e994c609:CCLessonNode" />
+              <item name="Q1" type="83e62b93:CCTaskNode" />
             </path>
           </expand>
           <select />
@@ -237,9 +245,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="798" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27766323" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28183118" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -255,28 +264,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Task" order="3" visible="true" weight="0.3072165" />
+      <window_info anchor="right" id="Task" order="3" visible="true" weight="0.30686694" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Trie/Q1/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trie/Q1/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state>
-          <EduEditorState>
-            <MainEditorState relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="30" selection-end-column="25" />
-            </MainEditorState>
-          </EduEditorState>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DFS-BFS/Q1/task.py">
       <provider selected="true" editor-type-id="StudyEditor">
         <state>
@@ -342,13 +333,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Python Workshop/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Python Workshop/main.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.047/Python Workshop/main.py" />
     <entry file="file://$PROJECT_DIR$/DFS-BFS/Q3/task.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -435,13 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/heapq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/heapq.py" />
     <entry file="file://$PROJECT_DIR$/Heap/Q2/task.py">
       <provider selected="true" editor-type-id="StudyEditor">
         <state>
@@ -615,13 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="756" selection-start-line="756" selection-end-line="756" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/random.py" />
     <entry file="file://$PROJECT_DIR$/Balanced BSTs/Q1/task.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -705,6 +678,24 @@
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSU/Q1/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="241">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="66" selection-end-column="18" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSU/Q1/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
