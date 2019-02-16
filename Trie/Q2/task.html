@@ -1,4 +1,10 @@
 <html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Trie Task 2</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
 <body dir="rtl">
 <p>
 شما یک Numpad دارید که میتوانید از آن برای نوشتن کلمات کمک بگیرید. numpad شما کلید های 0 تا 9 ای دارد که به هرکدام حروفی از 'a' تا 'z' نسبت داده شده. هیچ حرفی به دو کلید نسبت داده نشده است.
@@ -11,9 +17,12 @@
     <tr> <td>6: g q</td> <td>7: h r </td> <td>8: k s </td></tr>
     <tr><td></td><td>9: j t</td><td></td></tr>
     </table>
+</p>
+<p>
     از طرفی، یک دیکشنری از کلمات هم به شما داده شده. شما میتوانید از keypad برای نوشتن کلمات استفاده کنید. مثلا برای جمله "Hello World" باید کلید ها به شکلِ
-<p dir="ltr">"7 0 1 1 4 2 4 7 1 3"</p>
+    <p dir="ltr">"7 0 1 1 4 2 4 7 1 3"</p>
 وارد شوند. ممکن است یک دنباله از کلید ها بتواند نمایانگر چند عبارت از دیکشنری باشد یا حتی نمایانگر عبارتی از دیکشنری نباشد. میگوییم یک مجموعه از کلمات، یک دنباله از کلیدها را پوشش میدهد، اگر بتوان یک عبارت از آن کلمات ساخت که دنباله کلیدها نشان دهنده آن عبارت باشد. یک عبارت از به هم چسباندنِ چند کلمه ساخته میشود. حالا شما باید با گرفتنِ یک دیکشنری، یک numpad و یک دنباله از کلید ها، اندازه کوچکترین مجموعه ای از کلمات که دنباله کلیدها را پوشش میدهد، خروجی دهید.
+</p>
 <hr/>
 ورودی: <br/>
 پارامترهای تابع main که باید آن را کامل کنید.<br/>
@@ -44,9 +53,8 @@ Dictionary, Numpad, Keyset <br/>
 </p>
 </body>
 <div class="hint" dir="ltr">
-    dynamic programming. <br>
-    f[0] = 0;
-    <br>
+    dynamic programming. <br/>
+    f[0] = 0; </br>
     f[i] = min{ f[j] + 1 };  for all 0 <= j < i and S[j+1 .. i] is a word.
 </div>
 </html>
