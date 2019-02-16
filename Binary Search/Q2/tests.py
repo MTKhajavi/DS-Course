@@ -42,7 +42,9 @@ tests = [[57270, 70040],
  [87954, 98632],
  [17853, 53368],
  [30601, 84812],
- [32505, 96095]]
+ [32505, 96095],
+ [1, 100000]
+]
 
 
 class Question:
@@ -61,4 +63,4 @@ class Question:
 
 if __name__ == '__main__':
     for test in tests:
-        test_function(test[0], solve, Question(test[0], test[1]))
+        test_function(test, solve, Question(test[0], test[1]))
