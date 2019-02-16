@@ -751,7 +751,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  در الگوریتم مرتب سازی ((من)) ! در هر مرحله می توانیم یک عنصر را انتخاب کنیم و آن از جایگاهش حذف کنیم و به آخر و یا اول آرایه انتقال دهیم و با شیفت دادن جایگاه ها را پر کنیم.&#10;  &lt;br&gt;&#10;  حالا با الگوریتمی از مرتبه خطی ، کمترین تعداد مورد نیاز این انتقال را برای مرتب کردن این عناصر به صورت صعودی بیابید.&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  در الگوریتم مرتب سازی ((من)) ! در هر مرحله می توانیم یک عنصر را انتخاب کنیم و آن را به آخر و یا اول آرایه انتقال دهیم و جایگاه خالی را با شیفت دادن بقیه اعداد پر کنیم. مثلا در آرایه رو به رو [1 , 2 , 4 , 3] میتوناین عنصر 4 را به آخر آرایه انتقال دهیم و جای خالی را با شیفت دادن پر کنیم که در این صورت آرایه تبدیل به [4 , 1 , 2 , 3] می شود.&#10;  &lt;br&gt;&#10;  حالا با الگوریتمی از مرتبه خطی ، کمترین تعداد مورد نیاز حرکت بالا برای مرتب کردن این عناصر به صورت صعودی را بیابید.&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&#10;&lt;/html&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -814,7 +814,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  به شما دو عدد  n , m داده می شود که n تعداد اعضای آرایه و m کران بالایی برای اعضا است.&#10;  &lt;br&gt;&#10;  این n عنصر را به صورت stack کنار هم می چینیم(که ارتفاع stack شماره i برابر با ai است یعنی از ai تا block تشکیل شده)&#10;  &lt;br&gt;&#10;  ماکسیمم تعداد block هایی که می توان برداشت بدون اینکه تصویر از بالا و راست این stack ها تغییر کند چقدر است ؟ (فرض کنید با برداشتن یک بلاک، بلاک های دیگر که روی آن هستند نمی افتند.)&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  به شما دو عدد  n , m داده می شود که n تعداد اعضای آرایه و m کران بالایی برای اعضا است.&#10;  &lt;br&gt;&#10;  این n عنصر را به صورت stack کنار هم می چینیم(که ارتفاع stack شماره i برابر با ai است یعنی از ai تا block تشکیل شده)&#10;  &lt;br&gt;&#10;  ماکسیمم تعداد block هایی که می توان برداشت بدون اینکه تصویر از بالا و راست این stack ها تغییر کند چقدر است ؟ (فرض کنید با برداشتن یک بلاک، بلاک های دیگر که روی آن هستند نمی افتند.)مثلا اگر ارتفاع بلاک ها به ترتیب 3 1 2 باشند می توان بلاک زیر 2 و دو بلاک زیر 3 را برداشت بدون آنکه تصویر ها تغییری کند.&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -877,7 +877,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  به شما یک آرایه n عضوی داده می شود که تعداد عناصر زوج آن با فرد آن برابر است.&#10;  &lt;br&gt;&#10;    می توانید آرایه را از بین دو عنصر x و y با هزینه قدر مطلق x - y برش بزنید به شرطی که تعداد عناصر زوج و فرد در هر کدام از برش ها با یکدیگر برابر باشند.&#10;  &lt;br&gt;&lt;br&gt;&#10;  حداکثر تعداد برش هایی را بیابید که هزینه برش ها از مقدار b داده شده بیشتر نباشد.&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;p style=&quot;direction : rtl;&quot;&gt;&#10;  به شما یک آرایه n عضوی داده می شود که تعداد عناصر زوج آن با فرد آن برابر است.&#10;  &lt;br&gt;&#10;     می توانید آرایه را از بین دو عنصر x و y با هزینه قدر مطلق x - y برش بزنید به شرطی که تعداد عناصر زوج و فرد در هر کدام از برش ها با یکدیگر برابر باشند.مثلا آرایه [1 , 4 , 3 , 2] را میتوان از بین 3 و 4 با هزینه 1 برش زد.&#10;  &lt;br&gt;&lt;br&gt;&#10;  حداکثر تعداد برش هایی را بیابید که هزینه برش ها از مقدار b داده شده بیشتر نباشد.&#10;&lt;/p&gt;&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
