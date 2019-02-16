@@ -1,117 +1,72 @@
+from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from test_helper import *
-from task import solve
-import string, random
+from task import *
+import random
 
 
-class Node(object):
-    def __init__(self, label):
-        self.label = label
-        self.par = self
-        self.rank = 0
-        self.min = 0
+def solve2(n, numbers, perm):
+    # numbers is a list of n integers
+    # perm is a list of the numbers 1 to n in some permutation
+    # Return a list of answers
 
-
-class DisjointSet(object):
-    def __init__(self, n):
-        self.n = n
-        self.nodes = [Node(i) for i in range(n)]
-
-    def find(self, u):
-        if u == u.par:
-            return u
-        return self.find(u.par)
-
-    def union(self, u, v):
-        u, v = self.find(u), self.find(v)
-        if u == v:  # u and v are in the same component
-            return False
-
-        # making v the vertex with better rank
-        if u.rank > v.rank:
-            u, v = v, u
-
-        # merging two components
-        u.par = v
-
-        # updating maximum depth as rank
-        if u.rank == v.rank:
-            v.rank += 1
-
-        v.min = min(v.min, u.min)
-
-        return True
-
-    # Returns a list of components where each component is a list of values
-    def get_all_components(self):
-        comps = [[] for _ in range(self.n)]
-        for node in self.nodes:
-            comps[self.find(node).label].append(node.label)
-
-        comps = [i for i in comps if i]  # Remove empty lists
-        return comps
-
-
-def solve2(n, m, words, prices, groups, message):
+    perm2 = [i - 1 for i in perm]
+    perm = perm2
+    answers = []
+    current_answer = 0
     dsu = DisjointSet(n)
-    indices = {}
-    for i in range(n):
-        dsu.nodes[i].min = prices[i]
-        indices[words[i]] = i
 
-    for group in groups:
-        for i in range(len(group)):
-            dsu.union(dsu.nodes[group[0]], dsu.nodes[group[i]])
+    def add(i, current_answer):
+        node = dsu.nodes[i]
+        node.added = True
+        node.sum = numbers[i]
+        if i > 0 and dsu.nodes[i - 1].added:
+            dsu.unite(node, dsu.nodes[i - 1])
+        if i < n - 1 and dsu.nodes[i + 1].added:
+            dsu.unite(node, dsu.nodes[i + 1])
 
-    price = 0
-    for word in message:
-        price += dsu.find(dsu.nodes[indices[word]]).min
+        parent = dsu.find(node)
+        current_answer = max(current_answer, parent.sum)
+        return current_answer
 
-    return price
+    for i in range(n - 1, -1, -1):
+        answers.append(current_answer)
+        current_answer = add(perm[i], current_answer)
 
-
-def string_generator(size, chars=string.ascii_lowercase):
-    return ''.join(random.choice(chars) for _ in range(size))
-
-
-def partition(lst, n):
-    random.shuffle(lst)
-    division = len(lst) / float(n)
-    return [lst[int(round(division * i)): int(round(division * (i + 1)))] for i in range(n)]
+    answers.reverse()
+    return answers
 
 
 if __name__ == '__main__':
     manual_tests = [
-        (5, 4, ['i', 'loser', 'am', 'the', 'second'], [100, 1, 1, 5, 10], [[0], [2], [1, 4], [3]],
-         ['i', 'am', 'the', 'second'], 107),
-
-        (5, 4, ['i', 'loser', 'am', 'the', 'second'], [100, 20, 1, 5, 10], [[0], [2], [1, 4], [3]],
-         ['i', 'am', 'the', 'second'], 116),
-
-        (1, 1, ['a'], [1000000000], [[0]], ['a'], 1000000000),
-
-        (1, 10, ['a'], [1000000000], [[0]], ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'], 10000000000),
+        (4, [1, 3, 2, 5], [3, 4, 1, 2], [5, 4, 3, 0]),
+        (5, [1, 2, 3, 4, 5], [4, 2, 3, 5, 1], [6, 5, 5, 1, 0]),
+        (8, [5, 5, 4, 4, 6, 6, 5, 5], [5, 2, 8, 7, 1, 3, 4, 6], [18, 16, 11, 8, 8, 6, 6, 0]),
+        (10, [3, 3, 3, 5, 6, 9, 3, 1, 7, 3], [3, 4, 6, 7, 5, 1, 10, 9, 2, 8], [34, 29, 14, 11, 11, 11, 8, 3, 1, 0]),
+        (17, [12, 9, 17, 5, 0, 6, 5, 1, 3, 1, 17, 17, 2, 14, 5, 1, 17],
+         [3, 7, 5, 8, 12, 9, 15, 13, 11, 14, 6, 16, 17, 1, 10, 2, 4],
+         [94, 78, 78, 77, 39, 39, 21, 21, 21, 21, 21, 21, 21, 9, 9, 5, 0]),
+        (17, [1, 6, 9, 2, 10, 5, 15, 16, 17, 14, 17, 3, 9, 8, 12, 0, 2],
+         [9, 13, 15, 14, 16, 17, 11, 10, 12, 4, 6, 5, 7, 8, 2, 3, 1],
+         [65, 64, 64, 64, 64, 64, 64, 64, 64, 46, 31, 31, 16, 16, 9, 1, 0]),
+        (17, [10, 10, 3, 9, 8, 0, 10, 13, 11, 8, 11, 1, 6, 9, 2, 10, 5],
+         [9, 4, 13, 2, 6, 15, 11, 5, 16, 10, 7, 3, 14, 1, 12, 8, 17],
+         [63, 52, 31, 31, 26, 23, 23, 23, 23, 23, 13, 13, 13, 13, 13, 5, 0]),
+        (10,
+         [606976827, 581094359, 726836550, 554157795, 277900063, 389778978, 555756858, 259222039, 862348978, 749561490],
+         [10, 8, 9, 5, 2, 1, 6, 3, 4, 7],
+         [4814072447, 3692501430, 3692501430, 2469065531, 1280994345, 1280994345, 1280994345, 555756858, 555756858, 0]),
     ]
 
     for test in manual_tests:
-        n, m, words, prices, groups, message, ans1 = test
-        ans2 = solve(n, m, words, prices, groups, message)
-        if ans1 != ans2:
-            failed("Wrong Answer! Input: {}, your output: {}, answer: {}".format((words, prices, groups, message), ans2,
-                                                                                 ans1))
+        test_function(test[-1], solve, test[0], test[1], test[2])
 
-        random_tests = 10
-        for i in range(random_tests):
-            n = random.randint(1000, 10000)
-            m = random.randint(1000, 10000)
-            k = random.randint(1, min(10, n))
-            words = [string_generator(random.randint(10, 20)) for _ in range(n)]
-            prices = [random.randint(1, 10000) for _ in range(n)]
-            lst = [i for i in range(n)]
-            groups = partition(lst, k)
-            message = [words[random.randint(0, n - 1)] for _ in range(m)]
-            ans2 = solve(n, m, words, prices, groups, message)
-            ans1 = solve2(n, m, words, prices, groups, message)
-            if ans2 != ans1:
-                failed("Wrong Answer! Input: {}, your output: {}, answer: {}".format((words, prices, groups, message),
-                                                                                     ans2,
-                                                                                     ans1))
+    random_tests = 100
+    for i in range(random_tests):
+        n = random.randint(1000, 10000)
+        nums = []
+        for i in range(n):
+            nums.append(random.randint(0, 1000000000))
+        perm = list(range(1, n + 1))
+        random.shuffle(perm)
+        x = solve2(n, nums, perm)
+        test_function(x, solve, n, nums, perm)
