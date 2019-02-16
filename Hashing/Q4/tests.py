@@ -1,6 +1,5 @@
 from task import LRUCache
 from test_helper import failed
-from time_limit import put_limit
 import random
 
 
@@ -75,8 +74,26 @@ class Queue:
 
 
 if __name__ == '__main__':
-    # put_limit(10)
-    # try:
+    simple_cache = LRUCache(5)
+    simple_cache.add(10 ** 9, 5)
+    simple_cache.add(3, 20)
+    simple_cache.add(4, 30)
+    if simple_cache.get(10 ** 9) != 5 or simple_cache.get(3) != 20 or simple_cache.get(4) != 30:
+        failed("Wrong Answer!")
+    simple_cache.add(100, 1)
+    simple_cache.add(101, 2)
+    simple_cache.get(10 ** 9)
+    simple_cache.add(102, 3)
+    if simple_cache.get(3) is not None:
+        failed("Wrong Answer!")
+    if simple_cache.get(10 ** 9) != 5:
+        failed("Wrong Answer!")
+    simple_cache.get(4)
+    simple_cache.get(100)
+    simple_cache.add(0, 0)
+    if simple_cache.get(101) is not None:
+        failed("Wrong Answer!")
+
     cache = LRUCache(100)
     sol = LRUCacheSol(100)
     keys = random.sample(range(0, 10 ** 10), 100000)
@@ -92,5 +109,3 @@ if __name__ == '__main__':
             key = random.choice(added)
             if cache.get(key) != sol.get(key):
                 failed("Wrong Answer!")
-    # except Exception:
-    #     failed("Timed Out!")

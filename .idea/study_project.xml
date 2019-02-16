@@ -2459,7 +2459,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;p dir=&quot;rtl&quot;&gt;&#10;    پیشنیاز:&#10;    &lt;br&gt;&#10;دفترچه Hash را مطالعه کنید.&#10;    &lt;br&gt;&#10;&lt;/p&gt;&#10;یکی از روش‌های تشخیص ایرادات تایپی (typoها) در متون و پیشنهاد کلمه‌های جایگزین&#10;استفاده از جدول درهم‌ سازیست. در این سوال می‌خواهیم که یک مدل ساده برنامه spell checker&#10;را پیاده سازی کنیم.&lt;br&gt;&#10;شما باید پیاده سازی توابع setup و suggestions را کامل کنید. تابع setup&#10;یکبار در ابتدای برنامه صدا زده می‌شود و کل کلمات صحیح موجود در دیکشنری&#10;به عنوان ورودی به آن داده می‌شود. پس از صدا زدن تابع setup، با هر بار صدا زدن&#10;تابع suggestions این تابع باید یک دوتایی برگرداند که مقدار اول آن True است در صورتیکه&#10;تایپ کلمه صحیح باشد(کلمه در دیکشنری موجود باشد) و در غیر اینصورت false است.&#10;مقدار دوم این دوتایی درصورتی که در کلمه غلط نگراشی موجود نبود یک مجموعه تهی&#10;و در غیر این صورت مجموعه‌ای از کلمات مشابه آن کلمه است. یک کلمه مشابه کلمه‌ای است که نسبت&#10;به کلمه ورودی دقیقا یک کارکتر بیشتر یا دقیقا یک کاراکتر کمتر داشته باشد&#10;یا اگر تعداد کاراکترها یکی بود در دقیقا یک کارکتر متفاوت باشند.&#10;ترتیب کلمات در لیست خروجی اهمیتی ندارند. برای درک بهتر&#10;به مثال مراجعه کنید.&lt;br&gt;&lt;br&gt;&#10;مثال:&lt;br&gt;&#10;فرض کنید تابع setup با ورودی {'hello', 'bye', 'salaam', 'salam'} صدا زده شود&#10;سپس خروجی هرکدام از توابع زیر، به شکل زیر است.&lt;br&gt;&#10;&lt;div dir=&quot;ltr&quot;&gt;&#10;suggestions(&quot;bye&quot;)&lt;br&gt;&#10;suggestions(&quot;hallo&quot;)&lt;br&gt;&#10;suggestions(&quot;hablo&quot;)&lt;br&gt;&#10;suggestions(&quot;salaa&quot;)&lt;br&gt;&#10;suggestions(&quot;aye&quot;)&lt;br&gt;&#10;Output:&lt;br&gt;&#10;(True, set())&lt;br&gt;&#10;(False, {&quot;hello&quot;})&lt;br&gt;&#10;(False, set())&lt;br&gt;&#10;(False, {&quot;salaam&quot;, &quot;salam&quot;})&lt;br&gt;&#10;(False, {&quot;bye&quot;})&lt;br&gt;&#10;&lt;/div&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;p dir=&quot;rtl&quot;&gt;&#10;    پیشنیاز:&#10;    &lt;br&gt;&#10;دفترچه Hash را مطالعه کنید.&#10;    &lt;br&gt;&#10;&lt;/p&gt;&#10;یکی از روش‌های تشخیص ایرادات تایپی (typoها) در متون و پیشنهاد کلمه‌های جایگزین&#10;استفاده از جدول درهم‌ سازیست. در این سوال می‌خواهیم که یک مدل ساده برنامه spell checker&#10;را پیاده سازی کنیم.&lt;br&gt;&#10;شما باید پیاده سازی توابع setup و suggestions را کامل کنید. تابع setup&#10;یکبار در ابتدای برنامه صدا زده می‌شود و کل کلمات صحیح موجود در دیکشنری&#10;به عنوان ورودی به آن داده می‌شود. پس از صدا زدن تابع setup، با هر بار صدا زدن&#10;تابع suggestions این تابع باید یک دوتایی برگرداند که مقدار اول آن True است در صورتیکه&#10;تایپ کلمه صحیح باشد(کلمه در دیکشنری موجود باشد) و در غیر اینصورت false است.&#10;مقدار دوم این دوتایی درصورتی که در کلمه غلط نگراشی موجود نبود یک مجموعه تهی&#10;و در غیر این صورت مجموعه‌ای از کلمات مشابه آن کلمه است. یک کلمه مشابه کلمه‌ای است که نسبت&#10;به کلمه ورودی دقیقا یک کارکتر بیشتر یا دقیقا یک کاراکتر کمتر داشته باشد&#10;یا اگر تعداد کاراکترها یکی بود در دقیقا یک کارکتر متفاوت باشند.&#10;بدیهتا ترتیب کلمات در مجموعه خروجی اهمیتی ندارند! برای درک بهتر&#10;به مثال مراجعه کنید.&lt;br&gt;&lt;br&gt;&#10;مثال:&lt;br&gt;&#10;فرض کنید تابع setup با ورودی {'hello', 'bye', 'salaam', 'salam'} صدا زده شود&#10;سپس خروجی هرکدام از توابع زیر، به شکل زیر است.&lt;br&gt;&#10;&lt;div dir=&quot;ltr&quot;&gt;&#10;suggestions(&quot;bye&quot;)&lt;br&gt;&#10;suggestions(&quot;hallo&quot;)&lt;br&gt;&#10;suggestions(&quot;hablo&quot;)&lt;br&gt;&#10;suggestions(&quot;salaa&quot;)&lt;br&gt;&#10;suggestions(&quot;aye&quot;)&lt;br&gt;&#10;Output:&lt;br&gt;&#10;(True, set())&lt;br&gt;&#10;(False, {&quot;hello&quot;})&lt;br&gt;&#10;(False, set())&lt;br&gt;&#10;(False, {&quot;salaam&quot;, &quot;salam&quot;})&lt;br&gt;&#10;(False, {&quot;bye&quot;})&lt;br&gt;&#10;&lt;/div&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -2491,7 +2491,7 @@
                                       <option name="placeholderText" value="return #Complete the function" />
                                       <option name="possibleAnswer" value="global words&#10;    words = set(dictionary)" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2508,7 +2508,7 @@
                                       <option name="placeholderText" value="return #Complete the function" />
                                       <option name="possibleAnswer" value="result = set()&#10;    is_legit = word in words&#10;    if not is_legit:&#10;        # add char&#10;        for i in range(len(word) + 1):&#10;            for char in string.ascii_lowercase:&#10;                possible = word[:i] + char + word[i:]&#10;                if possible in words:&#10;                    result.add(possible)&#10;        # remove char&#10;        for i in range(len(word)):&#10;            possible = word[:i] + word[i + 1:]&#10;            if possible in words:&#10;                result.add(possible)&#10;        # change char&#10;        for i in range(len(word)):&#10;            for char in string.ascii_lowercase:&#10;                possible = word[:i] + char + word[i + 1:]&#10;                if possible in words:&#10;                    result.add(possible)&#10;    return is_legit, result" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2521,22 +2521,6 @@
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
-                          <entry key="time_limit.py">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="true" />
-                                <option name="name" value="time_limit.py" />
-                                <option name="text" value="" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
-                                <option name="visible" value="false" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -2564,7 +2548,7 @@
                       </option>
                       <option name="index" value="2" />
                       <option name="name" value="Q2" />
-                      <option name="status" value="Unchecked" />
+                      <option name="status" value="Solved" />
                       <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
@@ -2587,7 +2571,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="return key % self._size" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2604,7 +2588,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="key_hash = self._hash(key)&#10;        self._table[key_hash].append((key, value))" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2621,7 +2605,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="key_hash = self._hash(key)&#10;        for pair in self._table[key_hash]:&#10;            if key == pair[0]:&#10;                return pair[1]&#10;        return None" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2655,7 +2639,7 @@
                                       <option name="placeholderText" value="return #Complete the function" />
                                       <option name="possibleAnswer" value="table = HashTable(1000003)&#10;    for i in range(len(arr)):&#10;        for j in range(i + 1, len(arr)):&#10;            pair = table.get(k - arr[i] - arr[j])&#10;            if pair is not None:&#10;                if i not in pair and j not in pair:&#10;                    return (arr[i], arr[j]) + (arr[pair[0]], arr[pair[1]])&#10;            table.insert(arr[i] + arr[j], (i, j))&#10;    return None" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2668,22 +2652,6 @@
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
-                          <entry key="time_limit.py">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="time_limit.py" />
-                                <option name="text" value="" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
-                                <option name="visible" value="false" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -2711,7 +2679,7 @@
                       </option>
                       <option name="index" value="3" />
                       <option name="name" value="Q3" />
-                      <option name="status" value="Unchecked" />
+                      <option name="status" value="Solved" />
                       <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
@@ -2734,7 +2702,7 @@
                                       <option name="placeholderText" value="return &quot;&quot; #Complete the function" />
                                       <option name="possibleAnswer" value="p, q = 27, 10**9 + 7&#10;    hash_list = hash(str, q, p)&#10;    offset = p&#10;    for T in range(1, len(str)):&#10;        if is_period(hash_list, T, offset, q):&#10;            return T&#10;        offset = (offset * p) % q&#10;    return 0" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2751,7 +2719,7 @@
                                       <option name="placeholderText" value="" />
                                       <option name="possibleAnswer" value="def is_period(hash_list, T, offset, q):&#10;    return (hash_list[len(hash_list) - T - 1] * offset) % q == (hash_list[len(hash_list) - 1] - hash_list[T - 1]) % q&#10;&#10;&#10;def hash(str, q, p):&#10;    hash_list = [ord(str[0]) - ord('a') + 1]&#10;    s = 1&#10;    for i in range(1, len(str)):&#10;        s = (s * p) % q&#10;        hash_list.append((hash_list[i - 1] + (ord(str[i]) - ord('a') + 1) * s) % q)&#10;    return hash_list&#10;" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2764,22 +2732,6 @@
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
-                          <entry key="time_limit.py">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="time_limit.py" />
-                                <option name="text" value="" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
-                                <option name="visible" value="false" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -2807,7 +2759,7 @@
                       </option>
                       <option name="index" value="4" />
                       <option name="name" value="Q4" />
-                      <option name="status" value="Unchecked" />
+                      <option name="status" value="Solved" />
                       <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
@@ -2830,7 +2782,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="for i in range(self._size):&#10;            cell: HashTable._Cell = self._table[self._hash(key, i)]&#10;            if cell is None or cell.is_deleted():&#10;                self._table[self._hash(key, i)] = HashTable._Cell(key, value)&#10;                return True&#10;        return False" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2847,7 +2799,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="for i in range(self._size):&#10;            cell: HashTable._Cell = self._table[self._hash(key, i)]&#10;            if cell is None:&#10;                break&#10;            if cell.get_key() == key:&#10;                cell.delete()&#10;                break" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2864,7 +2816,7 @@
                                       <option name="placeholderText" value="return #Complete it" />
                                       <option name="possibleAnswer" value="for i in range(self._size):&#10;            cell: HashTable._Cell = self._table[self._hash(key, i)]&#10;            if cell is None:&#10;                return None&#10;            if not cell.is_deleted() and cell.get_key() == key:&#10;                return cell.get_value()" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2898,7 +2850,7 @@
                                       <option name="placeholderText" value="#Complete it" />
                                       <option name="possibleAnswer" value="self._time_queue = Queue(size)" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2915,7 +2867,7 @@
                                       <option name="placeholderText" value="#Complete it" />
                                       <option name="possibleAnswer" value="return self._time_queue.get(key)" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2932,7 +2884,7 @@
                                       <option name="placeholderText" value="#Complete it" />
                                       <option name="possibleAnswer" value="self._time_queue.push(key, value)" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2949,7 +2901,7 @@
                                       <option name="placeholderText" value="" />
                                       <option name="possibleAnswer" value="class Queue:&#10;    class Node:&#10;        def __init__(self, prev, key, value, next):&#10;            self.prev = prev&#10;            self.key = key&#10;            self.value = value&#10;            self.next = next&#10;&#10;    def __init__(self, size):&#10;        self._size = 0&#10;        self._max = size&#10;        self._front = None&#10;        self._rear = None&#10;        self._hashTable = HashTable(100 * size)&#10;&#10;    def push(self, key, value):&#10;        if self._rear is None:&#10;            self._rear = Queue.Node(None, key, value, None)&#10;            self._front = self._rear&#10;        else:&#10;            self._rear.prev = Queue.Node(None, key, value, self._rear)&#10;            self._rear = self._rear.prev&#10;        self._size += 1&#10;        if self._size &gt; self._max:&#10;            self.pop()&#10;        self._hashTable.insert(key, self._rear)&#10;&#10;    def delete(self, key):&#10;        node = self._hashTable.get(key)&#10;        if node.prev is not None:&#10;            node.prev.next = node.next&#10;        else:&#10;            self._rear = node.next&#10;        if node.next is not None:&#10;            node.next.prev = node.prev&#10;        else:&#10;            self._front = node.prev&#10;        self._hashTable.delete(key)&#10;        self._size -= 1&#10;&#10;    def pop(self):&#10;        key = None&#10;        if self._front is not None:&#10;            key = self._front.key&#10;            self._front = self._front.prev&#10;            self._front.next = None&#10;            self._hashTable.delete(key)&#10;        self._size -= 1&#10;        return key&#10;&#10;    def get(self, key):&#10;        node = self._hashTable.get(key)&#10;        if node is not None:&#10;            self.delete(key)&#10;            self.push(key, node.value)&#10;            return node.value&#10;        return None" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2962,22 +2914,6 @@
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
-                          <entry key="time_limit.py">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="time_limit.py" />
-                                <option name="text" value="" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
-                                <option name="visible" value="false" />
                               </TaskFile>
                             </value>
                           </entry>

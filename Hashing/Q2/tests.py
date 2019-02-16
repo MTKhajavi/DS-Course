@@ -1,6 +1,5 @@
 import random
 from task import answer
-from time_limit import put_limit
 from test_helper import failed
 
 
@@ -21,8 +20,10 @@ def generate_test():
 
 
 if __name__ == '__main__':
-    # put_limit(10)
-    # try:
+    if answer([0, 0, 0, 0], 100) is not None:
+        failed("Wrong Answer!")
+    if set(answer([10, 20, 20, 10, 40, 100], 160)) != {100, 10, 40, 10}:
+        failed("Wrong Answer!")
     for i in range(5):
         arr = generate_test()
         values = random.sample(arr, 4)
@@ -39,5 +40,3 @@ if __name__ == '__main__':
         elif ans is not None:
             if len(set(result)) < 4 or sum(result) != sum(ans):
                 failed("Wrong Answer!")
-    # except Exception:
-    #     failed("Timed out!")

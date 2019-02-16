@@ -2,7 +2,6 @@ import random
 import string
 import task
 from test_helper import failed
-from time_limit import put_limit
 
 
 def sol(str):
@@ -35,11 +34,10 @@ def generate_test():
 
 
 if __name__ == '__main__':
-    # put_limit(10)
-    # try:
-    for i in range(5):
-        str = generate_test()
-        if sol(str) != task.period(str):
-            failed("Wrong Answer!")
-    # except Exception:
-    #     failed("Timed Out!")
+    if task.period("ggg") != 1:
+        failed("Wrong Answer!")
+    if task.period("abcdefgabcdefg") != 7:
+        failed("Wrong Answer!")
+    str = generate_test()
+    if sol(str) != task.period(str):
+        failed("Wrong Answer!")
