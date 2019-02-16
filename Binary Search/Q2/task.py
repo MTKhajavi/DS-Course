@@ -1,35 +1,57 @@
-def solve(question):
-    max_n = 100000
-    l_low = 1
-    l_hi = max_n
+def solve(n, k, a):
+    a = sorted(a)
 
-    while l_hi - l_low > 1:
-        mid = (l_hi + l_low) // 2
-        ans = question.ask(1, mid)
-        if ans:
-            l_hi = mid
+    # First Let's find smallest possible maximum for k days
+    def is_max_ok(mx):
+        tmp = 0
+        for val in a:
+            if val > mx:
+                tmp += val - mx
+        return tmp <= k
+
+    max_lo = a[0]
+    max_hi = a[-1]
+
+    while max_hi - max_lo > 1:
+        mid = int((max_hi + max_lo) / 2)
+        if is_max_ok(mid):
+            max_hi = mid
         else:
-            l_low = mid
+            max_lo = mid
 
-    if question.ask(1, l_low):
-        l = l_low
+    if is_max_ok(max_lo):
+        ans_max = max_lo
     else:
-        l = l_hi
+        ans_max = max_hi
 
-    r_low = 1
-    r_hi = max_n
+    # Now, Let's find greatest possible minimum for k days
 
-    while r_hi - r_low > 1:
-        mid = (r_hi + r_low) // 2
-        ans = question.ask(mid, max_n)
-        if ans:
-            r_low = mid
+    def is_min_ok(mn):
+        tmp = 0
+        for val in a:
+            if val < mn:
+                tmp += mn - val
+        return tmp <= k
+
+    min_lo = a[0]
+    min_hi = a[-1]
+
+    while min_hi - min_lo > 1:
+        mid = int((min_hi + min_lo) / 2)
+        if is_min_ok(mid):
+            min_lo = mid
         else:
-            r_hi = mid
+            min_hi = mid
 
-    if question.ask(r_hi, max_n):
-        r = r_hi
+    if is_min_ok(min_hi):
+        ans_min = min_hi
     else:
-        r = r_low
+        ans_min = min_lo
 
-    return [l, r]
+    if ans_min >= ans_max:
+        if sum(a) % n != 0:  # We can only achieve it iff sum is divisible by 0
+            return 1
+        else:
+            return 0
+    else:
+        return ans_max - ans_min

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08ce474-6b70-406a-8017-2ca9b6d2f30a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DS Course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DS Course.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/study_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/study_project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSU/Q1/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/DSU/Q1/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binary Search/Q2/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/Binary Search/Q2/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binary Search/Q2/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Binary Search/Q2/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,25 +17,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSU/Q1/task.py">
-          <provider selected="true" editor-type-id="StudyEditor">
-            <state>
-              <EduEditorState>
-                <MainEditorState relative-caret-position="241">
-                  <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="66" selection-end-column="18" />
-                </MainEditorState>
-              </EduEditorState>
+        <entry file="file://$PROJECT_DIR$/Binary Search/Q2/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DSU/Q1/task.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <entry file="file://$PROJECT_DIR$/Binary Search/Q2/task.py">
+          <provider selected="true" editor-type-id="StudyEditor">
+            <state>
+              <EduEditorState>
+                <MainEditorState relative-caret-position="165">
+                  <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+                </MainEditorState>
+              </EduEditorState>
             </state>
           </provider>
         </entry>
@@ -42,6 +49,7 @@
     <findStrings>
       <find>&lt;/pre&gt;</find>
       <find>row_mat</find>
+      <find>572</find>
     </findStrings>
     <replaceStrings>
       <replace>k</replace>
@@ -53,7 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BST/Q2/task.html" />
         <option value="$PROJECT_DIR$/BST/Q2/tests.py" />
         <option value="$PROJECT_DIR$/BST/Q3/task.html" />
         <option value="$PROJECT_DIR$/BST/Q2/task.py" />
@@ -67,7 +74,6 @@
         <option value="$PROJECT_DIR$/Binary Search/Q1/task.py" />
         <option value="$PROJECT_DIR$/Binary Search/Q1/task.html" />
         <option value="$PROJECT_DIR$/Binary Search/Q2/task.html" />
-        <option value="$PROJECT_DIR$/Binary Search/Q2/task.py" />
         <option value="$PROJECT_DIR$/DFS-BFS/Q1/task.py" />
         <option value="$PROJECT_DIR$/DFS-BFS/Q1/tests.py" />
         <option value="$PROJECT_DIR$/DFS-BFS/Q1/task.html" />
@@ -104,10 +110,12 @@
         <option value="$PROJECT_DIR$/Balanced BSTs/Q2/tests.py" />
         <option value="$PROJECT_DIR$/Balanced BSTs/Q1/tests.py" />
         <option value="$PROJECT_DIR$/DSU/Q1/task.html" />
+        <option value="$PROJECT_DIR$/Binary Search/Q2/tests.py" />
+        <option value="$PROJECT_DIR$/Binary Search/Q2/task.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="798" />
@@ -139,13 +147,19 @@
             <path>
               <item name="DS-Course" type="a264ea2a:RootNode" />
               <item name="DS-Course" type="ef639090:CCCourseNode" />
-              <item name="DSU" type="e994c609:CCLessonNode" />
+              <item name="Binary Search" type="e994c609:CCLessonNode" />
             </path>
             <path>
               <item name="DS-Course" type="a264ea2a:RootNode" />
               <item name="DS-Course" type="ef639090:CCCourseNode" />
-              <item name="DSU" type="e994c609:CCLessonNode" />
+              <item name="Binary Search" type="e994c609:CCLessonNode" />
               <item name="Q1" type="83e62b93:CCTaskNode" />
+            </path>
+            <path>
+              <item name="DS-Course" type="a264ea2a:RootNode" />
+              <item name="DS-Course" type="ef639090:CCCourseNode" />
+              <item name="Binary Search" type="e994c609:CCLessonNode" />
+              <item name="Q2" type="83e62b93:CCTaskNode" />
             </path>
           </expand>
           <select />
@@ -156,7 +170,7 @@
   <component name="PropertiesComponent">
     <property name="HINTS_IN_TASK_DESCRIPTION" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -245,10 +259,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="798" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28183118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -258,53 +272,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" weight="0.3298153" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295063" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Task" order="3" visible="true" weight="0.30686694" />
+      <window_info active="true" anchor="right" id="Task" order="3" visible="true" weight="0.30613893" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DFS-BFS/Q1/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state>
-          <EduEditorState>
-            <MainEditorState relative-caret-position="391">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-            </MainEditorState>
-          </EduEditorState>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DFS-BFS/Q1/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DFS-BFS/Q2/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state>
-          <EduEditorState>
-            <MainEditorState />
-          </EduEditorState>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DFS-BFS/Q2/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DFS-BFS/Q2/task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -333,7 +310,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Python Workshop/main.py" />
+    <entry file="file://$PROJECT_DIR$/../../Python Workshop/main.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.047/Python Workshop/main.py" />
     <entry file="file://$PROJECT_DIR$/DFS-BFS/Q3/task.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -681,21 +658,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DSU/Q1/task.html" />
     <entry file="file://$PROJECT_DIR$/DSU/Q1/task.py">
       <provider selected="true" editor-type-id="StudyEditor">
         <state>
           <EduEditorState>
-            <MainEditorState relative-caret-position="241">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="66" selection-end-column="18" />
+            <MainEditorState relative-caret-position="285">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
             </MainEditorState>
           </EduEditorState>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSU/Q1/task.html">
+    <entry file="file://$PROJECT_DIR$/Binary Search/Q1/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="225">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Binary Search/Q2/test_helper.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="300">
+              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Binary Search/Q2/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Binary Search/Q2/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </MainEditorState>
+          </EduEditorState>
         </state>
       </provider>
     </entry>
