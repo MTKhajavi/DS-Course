@@ -2175,8 +2175,8 @@
                         </FeedbackLink>
                       </option>
                       <option name="index" value="1" />
-                      <option name="name" value="Q1" />
-                      <option name="status" value="Unchecked" />
+                      <option name="name" value="Q2" />
+                      <option name="status" value="Solved" />
                       <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
@@ -2199,7 +2199,7 @@
                                       <option name="placeholderText" value="#Implement the function" />
                                       <option name="possibleAnswer" value="a = sorted(a)&#10;&#10;    # First Let's find smallest possible maximum for k days&#10;    def is_max_ok(mx):&#10;        tmp = 0&#10;        for val in a:&#10;            if val &gt; mx:&#10;                tmp += val - mx&#10;        return tmp &lt;= k&#10;&#10;    max_lo = a[0]&#10;    max_hi = a[-1]&#10;&#10;    while max_hi - max_lo &gt; 1:&#10;        mid = int((max_hi + max_lo) / 2)&#10;        if is_max_ok(mid):&#10;            max_hi = mid&#10;        else:&#10;            max_lo = mid&#10;&#10;    if is_max_ok(max_lo):&#10;        ans_max = max_lo&#10;    else:&#10;        ans_max = max_hi&#10;&#10;    # Now, Let's find greatest possible minimum for k days&#10;&#10;    def is_min_ok(mn):&#10;        tmp = 0&#10;        for val in a:&#10;            if val &lt; mn:&#10;                tmp += mn - val&#10;        return tmp &lt;= k&#10;&#10;    min_lo = a[0]&#10;    min_hi = a[-1]&#10;&#10;    while min_hi - min_lo &gt; 1:&#10;        mid = int((min_hi + min_lo) / 2)&#10;        if is_min_ok(mid):&#10;            min_lo = mid&#10;        else:&#10;            min_hi = mid&#10;&#10;    if is_min_ok(min_hi):&#10;        ans_min = min_hi&#10;    else:&#10;        ans_min = min_lo&#10;&#10;    if ans_min &gt;= ans_max:&#10;        if sum(a) % n != 0:  # We can only achieve it iff sum is divisible by 0&#10;            return 1&#10;        else:&#10;            return 0&#10;    else:&#10;        return ans_max - ans_min" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -2221,7 +2221,7 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="testcases.py" />
                                 <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
@@ -2254,8 +2254,8 @@
                         </FeedbackLink>
                       </option>
                       <option name="index" value="2" />
-                      <option name="name" value="Q2" />
-                      <option name="status" value="Failed" />
+                      <option name="name" value="Q1" />
+                      <option name="status" value="Solved" />
                       <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
@@ -2278,7 +2278,7 @@
                                       <option name="placeholderText" value="#Implement the function" />
                                       <option name="possibleAnswer" value="max_n = 100000&#10;    l_low = 1&#10;    l_hi = max_n&#10;&#10;    while l_hi - l_low &gt; 1:&#10;        mid = (l_hi + l_low) // 2&#10;        ans = question.ask(1, mid)&#10;        if ans:&#10;            l_hi = mid&#10;        else:&#10;            l_low = mid&#10;&#10;    if question.ask(1, l_low):&#10;        l = l_low&#10;    else:&#10;        l = l_hi&#10;&#10;    r_low = 1&#10;    r_hi = max_n&#10;&#10;    while r_hi - r_low &gt; 1:&#10;        mid = (r_hi + r_low) // 2&#10;        ans = question.ask(mid, max_n)&#10;        if ans:&#10;            r_low = mid&#10;        else:&#10;            r_hi = mid&#10;&#10;    if question.ask(r_hi, max_n):&#10;        r = r_hi&#10;    else:&#10;        r = r_low&#10;&#10;    return [l, r]" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Failed" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
