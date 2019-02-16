@@ -1,3 +1,4 @@
+# TODO: type solution here
 from random import shuffle
 class Node:
     def __init__(self, key=None, red=False, parent=None, children=None):
@@ -118,13 +119,11 @@ class Tree:
         return self.dummy_parent.children[0]
 
 def func(li):
-    ans = 0
-    n = len(li)
-    for i in range(n):
-        for j in range(i + 1, n):
-            if li[i] > 2 * li[j]:
-                ans += 1
-    return ans
-
+    total = 0
+    x = Tree()
+    for i in range(len(li)):
+        total += i - x.rank(2 * li[i])
+        x.insert(li[i])
+    return total
 
 

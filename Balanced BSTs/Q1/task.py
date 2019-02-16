@@ -1,23 +1,58 @@
-class Node:
-    def __init__(self):
-        self.value = None
-        self.children = [None, None]
+from rb_tree import RedBlackTree
+from random import shuffle
 
-    def is_nill(self):
-        return self.value is None
+class My_pair:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
 
-    def insert(self, value):
-        if self.is_nill():
-            self.value = value
-            self.children = [Node(), Node()]
-            return 0
-        else:
-            dir_to_go = 0 if value < self.value else 1
-            depth = self.children[dir_to_go].insert(value)
-            return depth + 1
+    def increment_value(self):
+        self.value += 1
+
+    def __lt__(self, other):
+        return self.key < other.key
+
+    def __le__(self, other):
+        return self.key <= other.key
+
+    def __gt__(self, other):
+        return self.key > other.key
+
+    def __ge__(self, other):
+        return self.key >= other.key
+
+    def __eq__(self, other):
+        if self is None or other is None:
+            return self is None and other is None
+        return self.key == other.key
+
+    def __ne__(self, other):
+        return not self == other
+
+def main():
+    n = 10
+    li = [i for i in range(n)]
+    shuffle(li)
+    print(li)
+    print(func(li))
 
 def func(li):
-    tree = Node()
-    depths = [tree.insert(num) for num in li]
+    tree = RedBlackTree()
+    depths = []
+    for num in li:
+        next_node = tree.ceil(My_pair(num, None))
+        prev_node = tree.floor(My_pair(num, None))
+        parent_depth = -1
+        for node in (next_node, prev_node):
+            if node != None:
+                parent_depth = max(parent_depth, node.value)
+        tree.add(My_pair(num, parent_depth + 1))
+        depths.append(parent_depth + 1)
     return depths
 
+
+
+
+
+if __name__ == '__main__':
+    main()

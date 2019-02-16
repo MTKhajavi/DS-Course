@@ -1,3 +1,4 @@
+# TODO: type solution here
 class Node:
     def __init__(self, key=None, red=False, parent=None, children=None):
         self.key = key
@@ -180,20 +181,14 @@ class My_pair:
 
 
 def data_structure(li):
-    tree = {}
-    ans = []
-    for req in li:
-        if req[0] == 1:
-            x, y = req[1:3]
-            if x not in tree:
-                tree[x] = 0
-            tree[x] += y
+    x = Tree()
+    output = []
+    for cmd in li:
+        if cmd[0] == 1:
+            num = int(cmd[1])
+            amount = int(cmd[2])
+            x.increase_value(num, amount)
         else:
-            x = req[1]
-            sum_smaller_equal = 0
-            for num in tree:
-                if num <= x:
-                    sum_smaller_equal += tree[num]
-            ans.append(sum_smaller_equal)
-    return ans
-
+            num = int(cmd[1])
+            output.append(x.sum_range_zero(My_pair(num, None)))
+    return output
