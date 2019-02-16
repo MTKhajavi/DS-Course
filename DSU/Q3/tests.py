@@ -1,39 +1,133 @@
 from test_helper import *
 from task import solve
+import random
+import string
+
+
+class Node(object):
+    def __init__(self, label):
+        self.label = label
+        self.par = self
+        self.rank = 0
+
+
+class DisjointSet(object):
+    def __init__(self, n):
+        self.n = n
+        self.nodes = [Node(i) for i in range(n)]
+
+    def find(self, u):
+        if u == u.par:
+            return u
+        return self.find(u.par)
+
+    def union(self, u, v):
+        u, v = self.find(u), self.find(v)
+        if u == v:  # u and v are in the same component
+            return False
+
+        # making v the vertex with better rank
+        if u.rank > v.rank:
+            u, v = v, u
+
+        # merging two components
+        u.par = v
+
+        # updating maximum depth as rank
+        if u.rank == v.rank:
+            v.rank += 1
+
+        return True
+
+    # Returns a list of components where each component is a list of values
+    def get_all_components(self):
+        comps = [[] for _ in range(self.n)]
+        for node in self.nodes:
+            comps[self.find(node).label].append(node.label)
+
+        comps = [i for i in comps if i]  # Remove empty lists
+        return comps
+
+
+def solve2(n, a, b):
+    dsu = DisjointSet(26)
+    for i in range(n):
+        n1 = dsu.nodes[ord(a[i]) - ord('a')]
+        n2 = dsu.nodes[ord(b[i]) - ord('a')]
+        dsu.union(n1, n2)
+    comps = dsu.get_all_components()
+
+    ans = 26 - len(comps)
+    rules = []
+    for i in comps:
+        if len(i) > 1:
+            for j in range(1, len(i)):
+                rules.append((chr(ord('a') + i[0]), chr(ord('a') + i[j])))
+
+    return ans, rules
+
+
+def check_answer(n, a, b, ans, rules):
+    dsu1 = DisjointSet(26)
+    for i in range(n):
+        n1 = dsu1.nodes[ord(a[i]) - ord('a')]
+        n2 = dsu1.nodes[ord(b[i]) - ord('a')]
+        dsu1.union(n1, n2)
+
+    dsu2 = DisjointSet(26)
+    for rule in rules:
+        c1, c2 = rule
+        c1 = dsu2.nodes[ord(c1) - ord('a')]
+        c2 = dsu2.nodes[ord(c2) - ord('a')]
+        dsu2.union(c1, c2)
+
+    for i in range(26):
+        dsu1.find(dsu1.nodes[i])
+        dsu2.find(dsu1.nodes[i])
+    for i in range(26):
+        label2 = dsu2.find(dsu2.nodes[i]).label
+        n1 = dsu1.find(dsu1.nodes[label2]).label
+        n2 = dsu1.find(dsu1.nodes[i]).label
+        if n1 != n2:
+            failed("Wrong Answer! Input: {}, your output: {}, answer: {}".format((n, a, b), (ans, rules),
+                                                                                 solve2(n, a, b)))
+
+
+def string_generator(size, chars=string.ascii_lowercase):
+    return ''.join(random.choice(chars) for _ in range(size))
+
 
 if __name__ == '__main__':
     manual_tests = [
-        (14, [(25, 23), (499, 406), (193, 266), (823, 751), (219, 227), (101, 138), (978, 992), (43, 74), (997, 932),
-              (237, 189), (634, 538), (774, 740), (842, 767), (742, 802)], 13),
+        (3, 'abb', 'dad'),
+        (8, 'drpepper', 'cocacola'),
+        (1, 'h', 'p'),
+        (2, 'cx', 'da'),
+        (3, 'bab', 'aab'),
+        (15, 'xrezbaoiksvhuww', 'dcgcjrkafntbpbl'),
+        (10, 'daefcecfae', 'ccdaceefca'),
+        (10, 'fdfbffedbc', 'cfcdddfbed'),
+        (100, 'bltlukvrharrgytdxnbjailgafwdmeowqvwwsadryzquqzvfhjnpkwvgpwvohvjwzafcxqmisgyyuidvvjqljqshflzywmcccksk',
+         'jmgilzxkrvntkvqpsemrmyrasfqrofkwjwfznctwrmegghlhbbomjlojyapmrpkowqhsvwmrccfbnictnntjevynqilptaoharqv'),
 
-        (6, [(535, 699), (217, 337), (508, 780), (180, 292), (393, 112), (732, 888)], 5),
+        (100, 'pfkskdknmbxxslokqdliigxyvntsmaziljamlflwllvbhqnzpyvvzirhhhglsskiuogfoytcxjmospipybckwmkjhnfjddweyqqi',
+         'akvzmboxlcfwccaoknrzrhvqcdqkqnywstmxinqbkftnbjmahrvexoipikkqfjjmasnxofhklxappvufpsyujdtrpjeejhznoeai'),
 
-        (7, [(948, 946), (130, 130), (761, 758), (941, 938), (971, 971), (387, 385), (509, 510)], 6),
-
-        (9, [(811, 859), (656, 676), (76, 141), (945, 951), (497, 455), (18, 55), (335, 294), (267, 275), (656, 689)],
-         7),
-
-        (1, [(321, 88)], 0),
-        (11,
-         [(798, 845), (722, 911), (374, 270), (629, 537), (748, 856), (831, 885), (486, 641), (751, 829), (609, 492),
-          (98, 27), (654, 663)], 10),
-        (17,
-         [(660, 646), (440, 442), (689, 618), (441, 415), (922, 865), (950, 972), (312, 366), (203, 229), (873, 860),
-          (219, 199), (344, 308), (169, 176), (961, 992), (153, 84), (201, 230), (987, 938), (834, 815)], 16),
-        (24, [(171, 35), (261, 20), (4, 206), (501, 446), (961, 912), (581, 748), (946, 978), (463, 514), (841, 889),
-              (341, 466), (842, 967), (54, 102), (235, 261), (925, 889), (682, 672), (623, 636), (268, 94), (635, 710),
-              (474, 510), (697, 794), (586, 663), (182, 184), (806, 663), (468, 459)], 21),
-        (2, [(2, 1), (4, 1)], 0),
-        (2, [(2, 1), (1, 2)], 1),
-        (28,
-         [(462, 483), (411, 401), (118, 94), (111, 127), (5, 6), (70, 52), (893, 910), (73, 63), (818, 818), (182, 201),
-          (642, 633), (900, 886), (893, 886), (684, 700), (157, 173), (953, 953), (671, 660), (224, 225), (832, 801),
-          (152, 157), (601, 585), (115, 101), (739, 722), (611, 606), (659, 642), (461, 469), (702, 689), (649, 653)],
-         25),
+        (3, 'whw', 'uuh'),
+        (242,
+         'rrrrrrrrrrrrrmmmmmmmmmmmmmgggggggggggggwwwwwwwwwwwwwyyyyyyyyyyyyyhhhhhhhhhhhhhoooooooooooooqqqqqqqqqqqqqjjjjjjjjjjjjjvvvvvvvvvvvvvlllllllllllllnnnnnnnnnnnnnfffffffffffffeeeeeeeeaaaaaaaaiiiiiiiiuuuuuuuuzzzzzzzzbbbbbbbbxxxxxxxxttttttttsscckppdd',
+         'rmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfrmgwyhoqjvlnfeaiuzbxteaiuzbxteaiuzbxteaiuzbxteaiuzbxteaiuzbxteaiuzbxteaiuzbxtscsckpdpd')
     ]
 
     for test in manual_tests:
-        n, points, ans1 = test
-        ans2 = solve(n, points)
-        if ans1 != ans2:
-            failed("Wrong Answer! Input: {}, your output: {}, answer: {}".format((n, points), ans2, ans1))
+        n, a, b = test
+        ans, rules = solve(n, a, b)
+        check_answer(n, a, b, ans, rules)
+
+    random_tests = 50
+    for i in range(random_tests):
+        n = random.randint(1000, 100000)
+        a = string_generator(n)
+        b = string_generator(n)
+        ans, rules = solve(n, a, b)
+        check_answer(n, a, b, ans, rules)

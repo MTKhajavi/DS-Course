@@ -2,9 +2,8 @@ class Node(object):
     def __init__(self, label):
         self.label = label
         self.par = self
-        self.size = 1
-        self.sum = 0
-        self.added = False
+        self.rank = 0
+        self.min = 0
 
 
 class DisjointSet(object):
@@ -13,55 +12,57 @@ class DisjointSet(object):
         self.nodes = [Node(i) for i in range(n)]
 
     def find(self, u):
-        if u != u.par:  # here we user path compression trick
-            u.par = self.find(u.par)
-        return u.par
+        if u == u.par:
+            return u
+        return self.find(u.par)
 
-    def unite(self, u, v):
+    def union(self, u, v):
         u, v = self.find(u), self.find(v)
         if u == v:  # u and v are in the same component
             return False
 
-        # making v the vertex with bigger size
-        if u.size > v.size:
+        # making v the vertex with better rank
+        if u.rank > v.rank:
             u, v = v, u
 
         # merging two components
         u.par = v
 
-        # updating necessary variables
-        v.size += u.size
-        v.sum += u.sum
+        # updating maximum depth as rank
+        if u.rank == v.rank:
+            v.rank += 1
+
+        v.min = min(v.min, u.min)
 
         return True
 
+    # Returns a list of components where each component is a list of values
+    def get_all_components(self):
+        comps = [[] for _ in range(self.n)]
+        for node in self.nodes:
+            comps[self.find(node).label].append(node.label)
 
-def solve(n, numbers, perm):
-    # numbers is a list of n integers
-    # perm is a list of the numbers 1 to n in some permutation
-    # Return a list of answers
-    perm2 = [i - 1 for i in perm]
-    perm = perm2
-    answers = []
-    current_answer = 0
+        comps = [i for i in comps if i]  # Remove empty lists
+        return comps
+
+
+def solve(n, m, words, prices, groups, message):
+    assert n == len(words)
+    assert n == len(prices)
+    assert m == len(message)
+
     dsu = DisjointSet(n)
+    indices = {}
+    for i in range(n):
+        dsu.nodes[i].min = prices[i]
+        indices[words[i]] = i
 
-    def add(i, current_answer):
-        node = dsu.nodes[i]
-        node.added = True
-        node.sum = numbers[i]
-        if i > 0 and dsu.nodes[i - 1].added:
-            dsu.unite(node, dsu.nodes[i - 1])
-        if i < n - 1 and dsu.nodes[i + 1].added:
-            dsu.unite(node, dsu.nodes[i + 1])
+    for group in groups:
+        for i in range(len(group)):
+            dsu.union(dsu.nodes[group[0]], dsu.nodes[group[i]])
 
-        parent = dsu.find(node)
-        current_answer = max(current_answer, parent.sum)
-        return current_answer
+    price = 0
+    for word in message:
+        price += dsu.find(dsu.nodes[indices[word]]).min
 
-    for i in range(n - 1, -1, -1):
-        answers.append(current_answer)
-        current_answer = add(perm[i], current_answer)
-
-    answers.reverse()
-    return answers
+    return price
