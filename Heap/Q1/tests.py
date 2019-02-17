@@ -2,7 +2,6 @@ from test_helper import run_common_tests, failed, passed, get_answer_placeholder
 from task import *
 
 if __name__ == '__main__':
-    run_common_tests()
     n = 10
     arr1 = "0 0 0 0 1 0 1 0 1"
     arr2 = "5 10 17 6 2 1 3 2 4"

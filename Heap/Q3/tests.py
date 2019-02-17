@@ -2,7 +2,6 @@ from test_helper import run_common_tests, failed, passed, get_answer_placeholder
 from task import *
 
 if __name__ == '__main__':
-    run_common_tests()
     mat = [ [1, 3, 5, 7],
             [2, 4, 6, 8],
             [0, 9, 10, 11] ]

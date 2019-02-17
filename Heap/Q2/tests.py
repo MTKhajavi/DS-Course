@@ -3,7 +3,6 @@ from task import find_difference
 
 
 if __name__ == '__main__':
-    run_common_tests()
     tests = [
         (0, [20, 8, 22, 4, 12, 10, 14], 7, 7),
         (9, [1, 2, 3, 4, 5, 6], 5, 4),
