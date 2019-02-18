@@ -35,6 +35,7 @@ def vertical(node, column, distance, list):
 def verticalOrder(root):
     list = []
     global minimum, maximum
+    minimum, maximum = 0, 0
     find_left_right(root, 0)
     for column in range(minimum, maximum + 1):
         list.append([])
